@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="X4LogAnalyzer.TabControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+            xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+            xmlns:mahMaterialDragablzMashUp="clr-namespace:X4LogAnalyzer"
+            xmlns:dockablz="clr-namespace:Dragablz.Dockablz;assembly=Dragablz"
+            xmlns:wpf="http://materialdesigninxaml.net/winfx/xaml/themes" 
+            Loaded="UserControl_Loaded" GotFocus="UserControl_GotFocus" IsVisibleChanged="UserControl_IsVisibleChanged" >
+    <!--<StackPanel>-->
+    <!--<WrapPanel Orientation="Horizontal" >-->
+
+    <!--<StackPanel Orientation="Vertical" >-->
+    <dockablz:Layout>
+        <dragablz:TabablzControl BorderThickness="0"
+                                 Margin="0,-1,0,1" SelectionChanged="TabablzControl_SelectionChanged" >
+            <dragablz:TabablzControl.InterTabController>
+                <dragablz:InterTabController />
+            </dragablz:TabablzControl.InterTabController>
+            <TabItem Header="OPERATIONS" Name="tabImportLog">
+                <mahMaterialDragablzMashUp:Dialogs Margin="8">
+                    <mahMaterialDragablzMashUp:Dialogs.DataContext>
+                        <mahMaterialDragablzMashUp:ImportLogViewModel />
+                    </mahMaterialDragablzMashUp:Dialogs.DataContext>
+                </mahMaterialDragablzMashUp:Dialogs>
+            </TabItem>
+            <TabItem Header="SHIP INFORMATION" Name="tabShipInformation">
+                <mahMaterialDragablzMashUp:ShipLog Margin="16" />
+            </TabItem>
+            <TabItem Header="SHIP ANALYSIS" Name="tabShipAnalysis">
+                <mahMaterialDragablzMashUp:ShipGraph Margin="16" />
+            </TabItem>
+            <!--<TabItem Header="DESTINATION ANALYSIS" Name="tabDestinationAnalysis">
+                <mahMaterialDragablzMashUp:DestinationGraph Margin="16" />
+            </TabItem>-->
+            <TabItem Header="WARE ANALYSIS" Name="tabWareAnalysis">
+                <mahMaterialDragablzMashUp:WareAnalysis Margin="16" />
+            </TabItem>
+            <!--<TabItem Header="ANALYSIS" Name="tabAnalysis">
+                <mahMaterialDragablzMashUp:PaletteSelector Margin="16">
+                    <mahMaterialDragablzMashUp:PaletteSelector.DataContext>
+                        <mahMaterialDragablzMashUp:PaletteSelectorViewModel />
+                    </mahMaterialDragablzMashUp:PaletteSelector.DataContext>
+                </mahMaterialDragablzMashUp:PaletteSelector>
+            </TabItem>-->
+        </dragablz:TabablzControl>
+
+    </dockablz:Layout>
+    <!--</StackPanel>-->
+    <!--</StackPanel>-->
+    <!--</WrapPanel>-->
+</UserControl>

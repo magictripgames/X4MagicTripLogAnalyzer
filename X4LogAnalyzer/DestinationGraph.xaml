@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="X4LogAnalyzer.DestinationGraph"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="780" d:DesignWidth="1200" Loaded="UserControl_Loaded" GotFocus="UserControl_Loaded" IsVisibleChanged="UserControl_IsVisibleChanged">
+    <!--<StackPanel>-->
+    <!--<WrapPanel Orientation="Horizontal" >-->
+    <StackPanel Orientation="Vertical" >
+        <TextBlock TextWrapping="Wrap">Select the ship you want to analyse:</TextBlock>
+        <StackPanel Orientation="Horizontal" Height="660" >
+            <ListBox Margin="0,8,0,0" Name="shipList" Width="260" MouseLeftButtonDown="ShipList_MouseClick" MouseRightButtonDown="ShipList_MouseClick" MouseDown="ShipList_MouseClick" MouseDoubleClick="ShipList_MouseDoubleClick" SelectionChanged="ShipList_SelectionChanged"  >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <!--<ColumnDefinition Width="100" />-->
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding FullShipname}" Margin="0,0" />
+                            <!--<ProgressBar Grid.Column="1" Minimum="0" Maximum="100" Value="{Binding Completion}" />-->
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <StackPanel Width="Auto" Orientation="Vertical">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"  />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="200"  />
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center">Show Individual Sales</TextBlock>
+                    <ToggleButton HorizontalAlignment="Left" Grid.Column="1" Margin="0 0 0 0" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked" Command="{Binding ToggleStyleCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=IsChecked}" />
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2">Deduce Estimated Ware Cost</TextBlock>
+                    <ToggleButton HorizontalAlignment="Left" Grid.Column="3" Margin="0 0 0 0" Checked="ToggleButton_Checked_1" Unchecked="ToggleButton_Unchecked_1" Command="{Binding ToggleStyleCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=IsChecked}" />
+                </Grid>
+                
+                <Grid Width="1300" Height="640">
+                    <lvc:CartesianChart Name="ChartShip" Series="{Binding MySeriesCollection}" LegendLocation="Right" >
+                        <lvc:CartesianChart.AxisY>
+                            <!--<lvc:Axis Title="Money" LabelFormatter="{Binding Money}"></lvc:Axis>-->
+                            <lvc:Axis Title="Money"></lvc:Axis>
+                        </lvc:CartesianChart.AxisY>
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Title="Time" ></lvc:Axis>
+                        </lvc:CartesianChart.AxisX>
+                    </lvc:CartesianChart>
+                </Grid>
+            </StackPanel>
+            <!--<TextBlock TextWrapping="Wrap">Aqui</TextBlock>-->
+        </StackPanel>
+        <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Margin" Value="0,0,20,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Width="200" TextAlignment="Right">Time In Service:</TextBlock>
+            <TextBlock Name="TimeInService" TextAlignment="Right" Text="{Binding TimeInService}"></TextBlock>
+            <TextBlock Width="200" TextAlignment="Right">Items Traded:</TextBlock>
+            <TextBlock Name="QtdTraded" TextAlignment="Right" Text="{Binding TotalItemsTraded}"></TextBlock>
+            <TextBlock Width="200" TextAlignment="Right">Total Value Traded:</TextBlock>
+            <TextBlock Name="ValueTotalTraded" TextAlignment="Right" Text="{Binding TotalMoneyCollected}"></TextBlock>
+
+        </StackPanel>-->
+
+
+    </StackPanel>
+    
+        <!--</StackPanel>-->
+    <!--</WrapPanel>-->
+</UserControl>
