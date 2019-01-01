@@ -146,11 +146,18 @@ namespace X4LogAnalyzer
             configEntryIn = " " + configEntryIn.Trim() + " ";
             string configEntryTo = MainWindow.Configurations.Where(x => x.Key.Equals("ToTranslation")).FirstOrDefault().Value;
             configEntryTo = " " + configEntryTo.Trim() + " ";
+            int numberToSum = 4;
+            if (logEntry.Contains("bought"))
+            {
+                //configEntryIn = " bought ";
+                configEntryTo = " from ";
+                numberToSum = 6;
+            }
             int endPosition, startPosition;
             if (logEntry.Contains(configEntryIn))
             {
                 endPosition = logEntry.IndexOf(soldToId, 0) - 1;
-                startPosition = logEntry.IndexOf(configEntryTo, 0) + 4;
+                startPosition = logEntry.IndexOf(configEntryTo, 0) + numberToSum;
                 return logEntry.Substring(startPosition, endPosition - startPosition);
             }
             else
@@ -163,49 +170,54 @@ namespace X4LogAnalyzer
         {
             string configEntry = MainWindow.Configurations.Where(x => x.Key.Equals("SoldTranslation")).FirstOrDefault().Value;
             configEntry = " " + configEntry.Trim() + " ";
+            if (logEntry.Contains("bought"))
+            {
+                configEntry = " bought ";
+            }
             int position;
             if (logEntry.Contains(configEntry))
             {
                 position = logEntry.IndexOf(configEntry, 0);
                 return logEntry.Substring(position - 7, 7);
             }
-            else
-            {
-                return "";
-            }
+            return "";
         }
 
         private static string getShipName(string logEntry, string shipID)
         {
             string configEntry = MainWindow.Configurations.Where(x => x.Key.Equals("SoldTranslation")).FirstOrDefault().Value;
             configEntry = " " + configEntry.Trim() + " ";
+            if (logEntry.Contains("bought"))
+            {
+                configEntry = " bought ";
+            }
             int position;
             if (logEntry.Contains(configEntry))
             {
                 position = logEntry.IndexOf(shipID, 0);
                 return logEntry.Substring(0, position - 1);
             }
-            else
-            {
-                return "";
-            }
+            return "";
         }
 
         private static int getQtdSold(string logEntry)
         {
             string configEntry = MainWindow.Configurations.Where(x => x.Key.Equals("SoldTranslation")).FirstOrDefault().Value;
             configEntry = " " + configEntry.Trim() + " ";
+            int numberToSum = 6;
+            if (logEntry.Contains("bought"))
+            {
+                configEntry = " bought ";
+                numberToSum = 8;
+            }
             int position, positionEndQtd;
             if (logEntry.Contains(configEntry))
             {
-                position = logEntry.IndexOf(configEntry, 0) + 6;
+                position = logEntry.IndexOf(configEntry, 0) + numberToSum;
                 positionEndQtd = logEntry.IndexOf(" ", position);
                 return int.Parse(logEntry.Substring(position, positionEndQtd - position));
             }
-            else
-            {
-                return 0;
-            }
+            return 0;
         }
 
         private static string getProduct(string logEntry, int qtdSold)
@@ -214,10 +226,17 @@ namespace X4LogAnalyzer
             configEntrySold = " " + configEntrySold.Trim() + " ";
             string configEntryTo = MainWindow.Configurations.Where(x => x.Key.Equals("ToTranslation")).FirstOrDefault().Value;
             configEntryTo = " " + configEntryTo.Trim() + " ";
+            int numberToSum = 6;
+            if (logEntry.Contains("bought"))
+            {
+                configEntrySold = " bought ";
+                configEntryTo = " from ";
+                numberToSum = 8;
+            }
             int position, positionStartProduct;
             if (logEntry.Contains(configEntryTo))
             {
-                positionStartProduct = logEntry.IndexOf((configEntrySold), 0) + 6 + qtdSold.ToString().Length + 1;
+                positionStartProduct = logEntry.IndexOf((configEntrySold), 0) + numberToSum + qtdSold.ToString().Length + 1;
                 position = logEntry.IndexOf(configEntryTo, positionStartProduct);
 
                 return logEntry.Substring(positionStartProduct, position - positionStartProduct);

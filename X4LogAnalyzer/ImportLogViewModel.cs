@@ -54,26 +54,35 @@ namespace X4LogAnalyzer
 
         private async void InputDialog()
         {
-            var metroDialogSettings = new MetroDialogSettings
+            try
             {
-                CustomResourceDictionary = DialogDictionary,
-                DefaultText = MainWindow.Configurations.Where(x => x.Key.Equals("LastSaveGameLoaded")).FirstOrDefault().Value,
-                NegativeButtonText = "CANCEL"
-            };
+                var metroDialogSettings = new MetroDialogSettings
+                {
+                    CustomResourceDictionary = DialogDictionary,
+                    DefaultText = MainWindow.Configurations.Where(x => x.Key.Equals("LastSaveGameLoaded")).FirstOrDefault().Value,
+                    NegativeButtonText = "CANCEL"
+                };
 
-            string filePath = await DialogCoordinator.Instance.ShowInputAsync(this, "Select log file to be imported", "File:", metroDialogSettings);
-            if (filePath == null || "".Equals(filePath))
-            {
-                return;
+                string filePath = await DialogCoordinator.Instance.ShowInputAsync(this, "Select log file to be imported", "File:", metroDialogSettings);
+                if (filePath == null || "".Equals(filePath))
+                {
+                    return;
+                }
+                string path = Environment.ExpandEnvironmentVariables(filePath);
+                MainWindow.Configurations.Where(x => x.Key.Equals("LastSaveGameLoaded")).FirstOrDefault().Value = path;
+
+                MainWindow.SaveConfigurations();
+
+                Console.WriteLine(@path);
+                FileInfo compressedSaveFile = new FileInfo(path);
+                Decompress(compressedSaveFile);
             }
-            string path = Environment.ExpandEnvironmentVariables(filePath);
-            MainWindow.Configurations.Where(x => x.Key.Equals("LastSaveGameLoaded")).FirstOrDefault().Value = path;
+            catch (Exception err)
+            {
 
-            MainWindow.SaveConfigurations();
-
-            Console.WriteLine(@path);
-            FileInfo compressedSaveFile = new FileInfo(path);
-            Decompress(compressedSaveFile);
+                MessageBox.Show(string.Format("Error found while trying to import the save game. Error description: {0}", err.Message));
+            }
+            
         }
 
         private async void ProgressDialog()
@@ -142,10 +151,19 @@ namespace X4LogAnalyzer
             
             foreach (TradeOperation tradeOp in tradeOperations)
             {
-                MainWindow.GlobalTradeOperations.Add(tradeOp);
-                MainWindow.AddTradeOperationToShipList(tradeOp);
-                MainWindow.AddTradeOperationToWareList(tradeOp);
-                tradeOp.WriteToLog();
+                try
+                {
+                    MainWindow.GlobalTradeOperations.Add(tradeOp);
+                    MainWindow.AddTradeOperationToShipList(tradeOp);
+                    MainWindow.AddTradeOperationToWareList(tradeOp);
+                    tradeOp.WriteToLog();
+                }
+                catch (Exception err)
+                {
+
+                    MessageBox.Show(string.Format("Error while trying to summarize the operations - {0}",err.Message));
+                }
+                
             }
             using (StreamWriter file = File.CreateText(directory + @"\X4LogAnalyzerTempXML.json"))
             {
