@@ -146,7 +146,7 @@ namespace X4LogAnalyzer
             configEntryIn = " " + configEntryIn.Trim() + " ";
             string configEntryTo = MainWindow.Configurations.Where(x => x.Key.Equals("ToTranslation")).FirstOrDefault().Value;
             configEntryTo = " " + configEntryTo.Trim() + " ";
-            int numberToSum = 4;
+            int numberToSum = configEntryTo.Length;
             if (logEntry.Contains("bought"))
             {
                 //configEntryIn = " bought ";
@@ -204,7 +204,7 @@ namespace X4LogAnalyzer
         {
             string configEntry = MainWindow.Configurations.Where(x => x.Key.Equals("SoldTranslation")).FirstOrDefault().Value;
             configEntry = " " + configEntry.Trim() + " ";
-            int numberToSum = 6;
+            int numberToSum = configEntry.Length;
             if (logEntry.Contains("bought"))
             {
                 configEntry = " bought ";
@@ -226,7 +226,7 @@ namespace X4LogAnalyzer
             configEntrySold = " " + configEntrySold.Trim() + " ";
             string configEntryTo = MainWindow.Configurations.Where(x => x.Key.Equals("ToTranslation")).FirstOrDefault().Value;
             configEntryTo = " " + configEntryTo.Trim() + " ";
-            int numberToSum = 6;
+            int numberToSum = configEntrySold.Length;
             if (logEntry.Contains("bought"))
             {
                 configEntrySold = " bought ";

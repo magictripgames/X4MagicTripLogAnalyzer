@@ -117,7 +117,7 @@ namespace X4LogAnalyzer
                 {
                     MainWindow.Configurations.Add(new Configuration() { Key = "LastSaveGameLoaded", Value = @"%userprofile%\Documents\Egosoft\X4\[REPLACE_BY_USERID]\save\quicksave.xml.gz" });
                 }
-                if (MainWindow.Configurations.Where(x => x.Key.Equals("SoldToTranslation")).FirstOrDefault() == null)
+                if (MainWindow.Configurations.Where(x => x.Key.Equals("SoldTranslation")).FirstOrDefault() == null)
                 {
                     MainWindow.Configurations.Add(new Configuration() { Key = "SoldTranslation", Value = @"sold" });
                 }

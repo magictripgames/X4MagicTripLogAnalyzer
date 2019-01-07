@@ -1,0 +1,416 @@
+[
+	{
+		"Name": "Fortschrittliche Verbundwerkstoff",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 735,
+		"MarketAveragePrice": 865,
+		"MarketMaximumPrice": 994,
+		"Volume": 32,
+		"WareID": "Advanced Composites"
+	},
+	{
+		"Name": "Fortschrittliche Elektronikkomponenten",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 1986,
+		"MarketAveragePrice": 2207,
+		"MarketMaximumPrice": 2428,
+		"Volume": 30,
+		"WareID": "Advanced Electronics"
+	},
+	{
+		"Name": "Antimateriezellen",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 181,
+		"MarketAveragePrice": 202,
+		"MarketMaximumPrice": 222,
+		"Volume": 18,
+		"WareID": "Antimatter Cells"
+	},
+	{
+		"Name": "Antimateriewandler",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 626,
+		"MarketAveragePrice": 737,
+		"MarketMaximumPrice": 847,
+		"Volume": 10,
+		"WareID": "Antimatter Converters"
+	},
+	{
+		"Name": "Nanotronik",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 4254,
+		"MarketAveragePrice": 4478,
+		"MarketMaximumPrice": 4702,
+		"Volume": 24,
+		"WareID": "Claytronics"
+	},
+	{
+		"Name": "Drohnenbauteile",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 2261,
+		"MarketAveragePrice": 2512,
+		"MarketMaximumPrice": 2764,
+		"Volume": 30,
+		"WareID": "Drone Components"
+	},
+	{
+		"Name": "Energiezellen",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 11,
+		"MarketAveragePrice": 16,
+		"MarketMaximumPrice": 21,
+		"Volume": 1,
+		"WareID": "Energy Cells"
+	},
+	{
+		"Name": "Antriebsteile",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 480,
+		"MarketAveragePrice": 600,
+		"MarketMaximumPrice": 719,
+		"Volume": 30,
+		"WareID": "Engine Parts"
+	},
+	{
+		"Name": "Feldspulen",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 854,
+		"MarketAveragePrice": 1068,
+		"MarketMaximumPrice": 1281,
+		"Volume": 15,
+		"WareID": "Field Coils"
+	},
+	{
+		"Name": "Nahrungsrationen",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 34,
+		"MarketAveragePrice": 43,
+		"MarketMaximumPrice": 51,
+		"Volume": 1,
+		"WareID": "Food Rations"
+	},
+	{
+		"Name": "Graphen",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 150,
+		"MarketAveragePrice": 166,
+		"MarketMaximumPrice": 183,
+		"Volume": 20,
+		"WareID": "Graphene"
+	},
+	{
+		"Name": "Helium",
+		"TransportType": "Liquid",
+		"MarketMinimumPrice": 37,
+		"MarketAveragePrice": 44,
+		"MarketMaximumPrice": 51,
+		"Volume": 6,
+		"WareID": "Helium"
+	},
+	{
+		"Name": "Hüllenteile",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 413,
+		"MarketAveragePrice": 516,
+		"MarketMaximumPrice": 619,
+		"Volume": 25,
+		"WareID": "Hull Parts"
+	},
+	{
+		"Name": "Wasserstoff",
+		"TransportType": "Liquid",
+		"MarketMinimumPrice": 49,
+		"MarketAveragePrice": 58,
+		"MarketMaximumPrice": 67,
+		"Volume": 6,
+		"WareID": "Hydrogen"
+	},
+	{
+		"Name": "Eis",
+		"TransportType": "Solid",
+		"MarketMinimumPrice": 26,
+		"MarketAveragePrice": 30,
+		"MarketMaximumPrice": 35,
+		"Volume": 8,
+		"WareID": "Ice"
+	},
+	{
+		"Name": "Majastaub",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 233,
+		"MarketAveragePrice": 466,
+		"MarketMaximumPrice": 700,
+		"Volume": 6,
+		"WareID": "Maja Dust"
+	},
+	{
+		"Name": "Majaschnecken",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 76,
+		"MarketAveragePrice": 95,
+		"MarketMaximumPrice": 114,
+		"Volume": 6,
+		"WareID": "Maja Snails"
+	},
+	{
+		"Name": "Fleisch",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 57,
+		"MarketAveragePrice": 75,
+		"MarketMaximumPrice": 94,
+		"Volume": 6,
+		"WareID": "Meat"
+	},
+	{
+		"Name": "Medikamente",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 92,
+		"MarketAveragePrice": 115,
+		"MarketMaximumPrice": 138,
+		"Volume": 2,
+		"WareID": "Medical Supplies"
+	},
+	{
+		"Name": "Methan",
+		"TransportType": "Liquid",
+		"MarketMinimumPrice": 41,
+		"MarketAveragePrice": 48,
+		"MarketMaximumPrice": 55,
+		"Volume": 6,
+		"WareID": "Methane"
+	},
+	{
+		"Name": "Mikrochips",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 1364,
+		"MarketAveragePrice": 1516,
+		"MarketMaximumPrice": 1668,
+		"Volume": 22,
+		"WareID": "Microchips"
+	},
+	{
+		"Name": "Raketenbauteile",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 17,
+		"MarketAveragePrice": 21,
+		"MarketMaximumPrice": 26,
+		"Volume": 2,
+		"WareID": "Missile Components"
+	},
+	{
+		"Name": "Nividium",
+		"TransportType": "Solid",
+		"MarketMinimumPrice": 434,
+		"MarketAveragePrice": 510,
+		"MarketMaximumPrice": 587,
+		"Volume": 10,
+		"WareID": "Nividium"
+	},
+	{
+		"Name": "Nostropöl",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 48,
+		"MarketAveragePrice": 60,
+		"MarketMaximumPrice": 72,
+		"Volume": 1,
+		"WareID": "Nostrop Oil"
+	},
+	{
+		"Name": "Erz",
+		"TransportType": "Solid",
+		"MarketMinimumPrice": 43,
+		"MarketAveragePrice": 50,
+		"MarketMaximumPrice": 58,
+		"Volume": 10,
+		"WareID": "Ore"
+	},
+	{
+		"Name": "Plasmaleiter",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 1485,
+		"MarketAveragePrice": 1748,
+		"MarketMaximumPrice": 2010,
+		"Volume": 32,
+		"WareID": "Plasma Conductors"
+	},
+	{
+		"Name": "Quantumröhren",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 435,
+		"MarketAveragePrice": 511,
+		"MarketMaximumPrice": 588,
+		"Volume": 22,
+		"WareID": "Quantum Tubes"
+	},
+	{
+		"Name": "Veredelte Metalle",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 133,
+		"MarketAveragePrice": 148,
+		"MarketMaximumPrice": 163,
+		"Volume": 14,
+		"WareID": "Refined Metals"
+	},
+	{
+		"Name": "Sensorenbündel",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 1744,
+		"MarketAveragePrice": 1938,
+		"MarketMaximumPrice": 2131,
+		"Volume": 38,
+		"WareID": "Scanning Arrays"
+	},
+	{
+		"Name": "Schildkomponenten",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 387,
+		"MarketAveragePrice": 484,
+		"MarketMaximumPrice": 581,
+		"Volume": 10,
+		"WareID": "Shield Components"
+	},
+	{
+		"Name": "Silizium",
+		"TransportType": "Solid",
+		"MarketMinimumPrice": 111,
+		"MarketAveragePrice": 130,
+		"MarketMaximumPrice": 150,
+		"Volume": 10,
+		"WareID": "Silicon"
+	},
+	{
+		"Name": "Siliziumscheiben",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 269,
+		"MarketAveragePrice": 299,
+		"MarketMaximumPrice": 329,
+		"Volume": 18,
+		"WareID": "Silicon Wafers"
+	},
+	{
+		"Name": "Smart-Chips",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 176,
+		"MarketAveragePrice": 195,
+		"MarketMaximumPrice": 215,
+		"Volume": 5,
+		"WareID": "Smart Chips"
+	},
+	{
+		"Name": "Sojabohnen",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 88,
+		"MarketAveragePrice": 110,
+		"MarketMaximumPrice": 132,
+		"Volume": 5,
+		"WareID": "Soja Beans"
+	},
+	{
+		"Name": "Sojagrütze",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 50,
+		"MarketAveragePrice": 66,
+		"MarketMaximumPrice": 83,
+		"Volume": 1,
+		"WareID": "Soja Husk"
+	},
+	{
+		"Name": "Raumsprit",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 106,
+		"MarketAveragePrice": 213,
+		"MarketMaximumPrice": 319,
+		"Volume": 2,
+		"WareID": "Spacefuel"
+	},
+	{
+		"Name": "Raumkraut",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 176,
+		"MarketAveragePrice": 352,
+		"MarketMaximumPrice": 529,
+		"Volume": 3,
+		"WareID": "Spaceweed"
+	},
+	{
+		"Name": "Gewürze",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 30,
+		"MarketAveragePrice": 38,
+		"MarketMaximumPrice": 46,
+		"Volume": 3,
+		"WareID": "Spices"
+	},
+	{
+		"Name": "Sonnenblumen",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 105,
+		"MarketAveragePrice": 132,
+		"MarketMaximumPrice": 158,
+		"Volume": 5,
+		"WareID": "Sunrise Flowers"
+	},
+	{
+		"Name": "Suprafluid-Kühlmittel",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 135,
+		"MarketAveragePrice": 150,
+		"MarketMaximumPrice": 165,
+		"Volume": 16,
+		"WareID": "Superfluid Coolant"
+	},
+	{
+		"Name": "Sumpfpflanze",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 104,
+		"MarketAveragePrice": 138,
+		"MarketMaximumPrice": 173,
+		"Volume": 6,
+		"WareID": "Swamp Plant"
+	},
+	{
+		"Name": "Teladianium",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 182,
+		"MarketAveragePrice": 202,
+		"MarketMaximumPrice": 223,
+		"Volume": 16,
+		"WareID": "Teladianium"
+	},
+	{
+		"Name": "Geschützturmkomponenten",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 609,
+		"MarketAveragePrice": 761,
+		"MarketMaximumPrice": 913,
+		"Volume": 20,
+		"WareID": "Turret Components"
+	},
+	{
+		"Name": "Wasser",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 48,
+		"MarketAveragePrice": 53,
+		"MarketMaximumPrice": 58,
+		"Volume": 6,
+		"WareID": "Water"
+	},
+	{
+		"Name": "Waffenkomponenten",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 586,
+		"MarketAveragePrice": 733,
+		"MarketMaximumPrice": 879,
+		"Volume": 20,
+		"WareID": "Weapon Components"
+	},
+	{
+		"Name": "Weizen",
+		"TransportType": "Container",
+		"MarketMinimumPrice": 37,
+		"MarketAveragePrice": 49,
+		"MarketMaximumPrice": 61,
+		"Volume": 4,
+		"WareID": "Wheat"
+	}
+]
