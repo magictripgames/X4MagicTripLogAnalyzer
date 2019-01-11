@@ -84,7 +84,7 @@ namespace X4LogAnalyzer
                 waresSummary.TotalProfit = ware.GetTradeOperations().Sum(x => x.EstimatedProfit);
                 waresSummary.TotalValueSold = ware.GetTradeOperations().Sum(x => x.Money);
                 waresSummary.QuantitySold = ware.GetTradeOperations().Sum(x => x.Quantity);
-                if (waresSummary.TotalProfit > 0)
+                if (waresSummary.TotalProfit != 0)
                 {
                     WaresSummaries.Add(waresSummary);
                 }

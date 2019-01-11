@@ -238,8 +238,12 @@ namespace X4LogAnalyzer
             {
                 positionStartProduct = logEntry.IndexOf((configEntrySold), 0) + numberToSum + qtdSold.ToString().Length + 1;
                 position = logEntry.IndexOf(configEntryTo, positionStartProduct);
-
-                return logEntry.Substring(positionStartProduct, position - positionStartProduct);
+                string wareName = logEntry.Substring(positionStartProduct, position - positionStartProduct);
+                if (wareName.Contains("Cr)"))
+                {
+                    wareName = wareName.Substring(0, wareName.IndexOf("(")).Trim();
+                }
+                return wareName;
             }
             else
             {
